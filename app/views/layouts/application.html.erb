@@ -9,6 +9,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav>
+      <div class="nav-wrapper indigo darken-3 nav-bar">
+        <a href="#" class="brand-logo">Utah Physicians</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li> <%= link_to 'About', static_pages_about_path %> </li>
+          <li> <%= link_to 'Doctors', doctors_path %> </li>
+          <li> <%= link_to 'Patients', patients_path %> </li>
+          <li> <%= link_to 'Appointments', new_appointment_path %> </li>
+        </ul>
+      </div>
+    </nav>
+      <div class='container'>
+        <%= yield %>
+      </div>  
   </body>
 </html>

@@ -1,0 +1,11 @@
+<h1> New Doctor </h1>
+
+<%= form_for @doctor do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+
+  <%= f.label :specialty %>
+  <%= f.text_area :specialty %>
+
+  <%= f.submit %>
+<% end %>

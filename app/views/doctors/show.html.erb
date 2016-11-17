@@ -1,0 +1,10 @@
+<h1> <%= @doctor.name %> </h1>
+
+<h3> <%= @doctor.specialty %> </h3>
+
+<% @appointments.each do |appointment| %>
+	<% appointment.patient.full_name %>
+
+<% end %>
+
+

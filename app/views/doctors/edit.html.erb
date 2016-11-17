@@ -1,0 +1,15 @@
+<h1> Edit Doctor </h1>
+
+<%= form_for @doctor do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+
+  <%= f.label :specialty %>
+  <%= f.text_area :specialty %>
+
+  <%= f.submit %>
+
+<% end %>
+
+<br />
+<%= link_to 'Back', doctors_path, class: 'btn' %>

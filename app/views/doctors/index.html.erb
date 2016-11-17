@@ -1,0 +1,32 @@
+<div>
+	<h1>All Doctors: </h1>
+	
+	<% if @doctors.any? %>
+		<table class='striped'>
+			<thead>
+   			 <tr>
+      			<th>Doctor</th>
+      			<th>Specialty</th>
+      			<th colspan="3"></th>
+    		</tr>
+  		</thead>
+
+  		<tbody>
+			<% @doctors.each do |doctor| %>
+			<tr>
+				<td><%= doctor.name %></td>
+				<td><%= doctor.specialty %></td>
+				<td><%= link_to 'View', doctor_path(doctor) %></td>
+				<td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
+				<td><%= link_to 'Delete', doctor, method: :delete, data: { confirm: 'Are you sure?'} %></td>
+			</tr>
+			<% end %>
+	<% else %>
+			<h3>No doctors in the system. </h3>
+			</tbody>
+		</table>
+	<% end %>
+	
+	<%= link_to 'Add Doctor', new_doctor_path %>
+</div>
+

@@ -1,0 +1,15 @@
+<%= form_for @patient do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, required: true %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, required: true %>
+
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+
+  <%= f.label :insurance %>
+  <%= f.select :insurance, ['true', 'false'], required: true %>
+
+  <%= f.submit %>
+<% end %>
