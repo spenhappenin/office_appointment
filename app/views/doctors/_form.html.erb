@@ -1,11 +1,18 @@
-<h1> New Doctor </h1>
-
 <%= form_for @doctor do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, required: true %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, required: true %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, required: true %>
 
   <%= f.label :specialty %>
   <%= f.text_field :specialty %>
 
+  <%= f.label :about %>
+  <%= f.text_area :about %>
+
   <%= f.submit %>
 <% end %>
+
+<br />
+<%= link_to 'Back', doctors_path, class: 'btn' %>

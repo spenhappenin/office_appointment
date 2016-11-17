@@ -2,7 +2,7 @@ class AppointmentsController < ApplicationController
 
   def new
   	@patients = Patient.all.map{ |p| [p.full_name, p.id] }
-    @doctors = Doctor.all.map{ |d| [d.name, d.id] }
+    @doctors = Doctor.all.map{ |d| [d.full_name, d.id] }
     @appointment = Appointment.new
   end
 

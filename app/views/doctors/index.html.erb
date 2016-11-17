@@ -1,24 +1,25 @@
 <div>
-	<h1>All Doctors: </h1>
+	<h1 class="main-font bold">All Doctors: </h1>
 	
 	<% if @doctors.any? %>
 		<table class='striped'>
 			<thead>
    			 <tr>
-      			<th>Doctor</th>
-      			<th>Specialty</th>
+      			<th class='underline'>Doctor</th>
+      			<th class='underline'>Specialty</th>
       			<th colspan="3"></th>
     		</tr>
   		</thead>
 
-  		<tbody>
+  		<tbody class='table-decoration'>
 			<% @doctors.each do |doctor| %>
 			<tr>
-				<td><%= doctor.name %></td>
+				<td><%= doctor.full_name %></td>
 				<td><%= doctor.specialty %></td>
-				<td><%= link_to 'View', doctor_path(doctor) %></td>
-				<td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
-				<td><%= link_to 'Delete', doctor, method: :delete, data: { confirm: 'Are you sure?'} %></td>
+				<td><%= link_to 'View', doctor_path(doctor), class: 'td-view' %></td>
+				<td><%= link_to 'Edit', edit_doctor_path(doctor), class: 'td-edit' %></td>
+				<td><%= link_to 'Delete', doctor, 
+							method: :delete, data: { confirm: 'Are you sure?'}, class: 'td-delete' %></td>
 			</tr>
 			<% end %>
 	<% else %>

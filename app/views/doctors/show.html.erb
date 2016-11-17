@@ -1,10 +1,12 @@
-<h1> <%= @doctor.name %> </h1>
+<h1> <%= @doctor.full_name %> </h1>
 
 <h3> <%= @doctor.specialty %> </h3>
 
-<% @appointments.each do |appointment| %>
-	<% appointment.patient.full_name %>
+<span> <%= @doctor.about %> </span>
 
-<% end %>
+<% #@appointments.each do |appointment| %>
+	<% #appointment.patient.full_name %>
+
+<% #end %>
 
 

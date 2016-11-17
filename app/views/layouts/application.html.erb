@@ -4,8 +4,10 @@
     <title>OfficeAppointment</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
   </head>
 
   <body>
@@ -13,10 +15,12 @@
       <div class="nav-wrapper indigo darken-3 nav-bar">
         <a href="#" class="brand-logo">Utah Physicians</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <div class='nav-bar-stuff main-font'>
           <li> <%= link_to 'About', static_pages_about_path %> </li>
           <li> <%= link_to 'Doctors', doctors_path %> </li>
           <li> <%= link_to 'Patients', patients_path %> </li>
           <li> <%= link_to 'Appointments', new_appointment_path %> </li>
+          </div>
         </ul>
       </div>
     </nav>

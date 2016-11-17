@@ -1,9 +1,37 @@
 @import 'materialize';
 
+
+
+/***** S T Y L E S *****/
+
+
+
+.main-font {
+	font-family: 'Cinzel', serif !important;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+
+
+/**** B O D Y *****/
+
+
+
 html,
 body {
   height: 100%;
   margin: 0
+}
+
+body {
+	background-color: #CFD9CC !important;
 }
 
 .box {
@@ -43,8 +71,47 @@ body {
 	background-color: rgba(158,158,158,0.73)
 }
 
-.btn {
 
+
+/***** N A V *****/
+
+
+
+.brand-logo {
+	font-family: 'Cinzel', serif !important;
+	margin-left: 25px;
+	color: #fff;
+}
+
+.nav-bar-stuff {
+	margin-right: 15px;
+}
+
+
+
+/***** T A B L E *****/
+
+
+
+.table-decoration {
+	font-weight: bold;
+}
+
+.table-decoration tr td a {
+	color: #0C006C;
+	font-weight: bolder;
+}
+
+.table-decoration .td-view:hover {
+	color: #25B425;
+}
+
+.table-decoration .td-edit:hover {
+	color: #FEBA09;
+}
+
+.table-decoration .td-delete:hover {
+	color: #F1000C;
 }
 
 

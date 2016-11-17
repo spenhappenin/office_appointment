@@ -1,26 +1,26 @@
 <div>
 	<div class=''>
-		<h1>All Patients: </h1>
+		<h1 class='main-font bold'>All Patients: </h1>
 	
 	<% if @patients.any? %>
 		<table class='striped'>
 			<thead>
-				<th>Patient</th>
-				<th>Age</th>
-				<th>Insurance</th>
+				<th class='underline bold'>Patient</th>
+				<th class='underline bold'>Age</th>
+				<th class='underline bold'>Insurance</th>
 				<th colspan="3"></th>
 			</thead>
 	
-			<tbody>
+			<tbody class='table-decoration'>
 			<% @patients.each do |patient| %>
 			<tr>
 				<td><%= patient.full_name %></td>
 				<td><%= patient.age %></td>
 				<td><%= patient.insurance ? 'Yes' : 'No' %></td>
-				<td><%= link_to 'View', patient_path(patient), class: 'btn ' %></td>
-				<td><%= link_to 'Edit', edit_patient_path(patient), class: 'btn' %></td>
+				<td><%= link_to 'View', patient_path(patient), class: 'td-view' %></td>
+				<td><%= link_to 'Edit', edit_patient_path(patient), class: 'td-edit' %></td>
 				<td><%= link_to 'Delete', patient, method: :delete, 
-					data: { confirm: 'Are you sure?' }, class: 'btn' %>	</td>
+					data: { confirm: 'Are you sure?' }, class: 'td-delete' %></td>
 			</tr>
 			<% end %>
 		<% else %>
